@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore students</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>Поиск по студентам</h3>
+        </header>
+        <div class="window search-body">
+            <form class="form" autocomplete="off">
+                <div class="inputGroup">
+                    <h4>ФИО</h4>
+                    <input type="text" name="firstName" placeholder="Введите имя"> 
+                    <input type="text" name="lastName" placeholder="Введите фамилию">
+                </div>
+                <div class="inputGroup">
+                    <h4>Дата рождения</h4>
+                    <label for="birthdayFrom">От: </label>
+                    <input type="date" name="birthdayFrom" placeholder="Дата рождения от">
+                    <label for="birthdayTo" style="display: inline;">До: </label>
+                    <input type="date" name="birthdayTo" placeholder="Дата рождения до">
+                </div>
+                <div class="inputGroup">
+                    <h4>Группа</h4>
+                    <select class="select-list" name="groupList" placeholder="Группа">
+                        <!--Список групп-->
+                    </select>
+                </div>
+                <button class="btn btn-submit" type="submit">Поиск</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <h3>Список студентов</h3>
+        </header>
+        <div class="table-wrapper">
+            <table class="table-users">
+
+                <!--Students here-->
+            </table>
+            <button class="btn btn-add">Добавить студента</button>
+        </div>
+    </div>
+    <div class="add-modal modal-wrapper">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Добавить нового студента</h3>
+            </div>
+            <div class="window modal-body">
+                <form class="form" autocomplete="off">
+                    <input type="text" name="firstName" placeholder="Имя"> 
+                    <input type="text" name="lastName" placeholder="Фамилия">
+                    <input type="date" name="birthday" placeholder="Дата рождения">
+                    <input type="text" name="group" placeholder="Группа">
+                    <button class="btn btn-submit" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/firestoreConfig.js" type="module"></script>
+    <script src="./js/db.js" type="module"></script>
+    <script src="./js/search.js" type="module"></script>
+    <script src="./js/add_student_popup.js" type="module"></script>
+</body>
+</html>

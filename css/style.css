@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+    --primary-color: #5d99f4;
+    --secondary-color: #ff6c6c;
+    --header-color: rgba(238, 241, 255, 0.933);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+header {
+    width: 100%;
+    background: var(--primary-color);
+    padding: 1rem;
+}
+
+header h3 {
+    color: white;
+    margin-left: 1.5rem;
+}
+
+.table-users {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+.table-users th, .table-users td {
+    text-align: left;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: .5rem;
+}
+
+.table-users th {
+    background: var(--header-color);
+    padding: 1rem auto;
+}
+
+.btn {
+    background: transparent;
+    width: 5rem;
+    height: 2rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    outline: none;
+    transition: all .25s ease;
+}
+
+.btn-edit {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-edit:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-delete {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-delete:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.table-wrapper {
+    text-align: center;
+}
+
+.btn-add {
+    width: 12rem;
+    height: 2rem;
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+}
+
+.inputGroup {
+    border: 4px dashed rgba(28,110,164,0.5);
+    border-radius: 15px 15px 15px 15px;
+    
+    background-color: var(--header-color);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputGroup h4 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.inputGroup label {
+    font-size: 12pt;
+}
+
+input, select {
+    width: 100%;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    text-indent: .5rem;
+    outline: none;
+}
+
+/* Modal */
+
+.modal-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal {
+    position: relative;
+    background: #fff;
+    text-align: center;
+    width: 25rem;
+    margin: 5rem auto;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    animation-name: animatetop;
+    animation-duration: .3s;
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px; opacity: 0;
+    }
+    to {
+        top: 0; opacity: 1;
+    }
+}
+
+.modal-show {
+    display: block;
+}
+
+.modal-header {
+    margin-bottom: 1rem;
+    background: var(--header-color);
+    padding: 2rem;
+}
+
+.window {
+    padding: 1rem;
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    width: 12rem;
+    height: 2rem;
+}
+
