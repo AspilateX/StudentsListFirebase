@@ -1,4 +1,4 @@
-import { collection, query, where, getDocs, addDoc, deleteDoc, doc, onSnapshot, orderBy } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
+import { collection, query, where, addDoc, deleteDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
 import { db } from "./firestoreConfig.js"
 import { UpdateSearchGroupList } from "./search.js";
 import { renderStudent, removeStudentRenderById, clearStudentRenders } from "./studentsList.js";
@@ -25,6 +25,8 @@ export function showStudentsByFilter(firstName, lastName, birthdayFrom, birthday
     clearStudentRenders();
     
     var q = query(collection(db, "students"));
+
+    
 
     docsList.forEach((doc) => {
         let passes = true;

@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-firestore.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDdyuI_oGs76cwhdBIUHsCEKYFsPX3z7UE",
     authDomain: "studentsproject-332008.firebaseapp.com",
@@ -10,8 +11,8 @@ const firebaseConfig = {
     measurementId: "G-3JQRB2MM4R"
   };
 
-  // Initialize Firebase
-  initializeApp(firebaseConfig);
-  export const db = getFirestore();
+// Initialize Firebase
+initializeApp(firebaseConfig);
+export const db = getFirestore();
 
   
